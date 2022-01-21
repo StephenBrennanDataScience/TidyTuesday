@@ -1,6 +1,22 @@
 ---
-title: "Chocolate"
+title: "TidyTuesday"
+subtitle: "2022 Week 3: Chocolate"
 author: "Stephen Brennan"
 date: "20/01/2021"
 output: html_document
 ---
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+```{r data, message=FALSE, warning=FALSE}
+RawData <- tidytuesdayR::last_tuesday() %>%
+  tidytuesdayR::tt_load_gh() %>%
+  tidytuesdayR::tt_download()
+
+ChocData <- RawData$chocolate
+```
+
+
+
